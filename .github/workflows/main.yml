@@ -25,6 +25,7 @@ jobs:
           run: go build -v ./...
         
   CD:
+    needs: CI
     runs-on: ubuntu-latest
     steps:
         - name: 'Build and Publish Docker Image'
